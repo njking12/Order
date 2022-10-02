@@ -1,0 +1,156 @@
+<!-- 
+  Name: Noah King
+  Date: September 24th, 2022
+  Section: CST 8285 Section 302
+  Order submission form that makes use of HTML forms and HTML tables. Made for Lab 2.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Noah King">
+    <meta name="description" content="Simple order submission form.">
+    <title>Order Form</title>
+</head>
+<body>
+    <form action="process.php" method="POST" enctype="text/plain">
+        <h1>Order Form</h1>
+        <fieldset>
+            <legend>Basic Information</legend>
+
+                <label for="name">Name: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="name" id="name" value="Noah" size="30" disabled>
+                <br><br>
+
+                <label for="email">Email: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="email" name="email" id="email" value="noahjacobking12@outlook.com" size="30">
+                <br><br>
+
+                <label for="address">Address: &nbsp;</label>
+                <textarea name="address" id="address" cols="25" rows="6"></textarea>
+                <br><br>
+
+                <label for="postcode">Postcode:</label>
+                <input type="text" name="postcode" id="postcode">
+                <br><br>
+                
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Product Information</legend>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Part Number</th>
+                        <th scope="col" width="100px">Quantity</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col" width="200px">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Box</td>
+                        <td>AC100</td>
+                        <td></td>
+                        <td>$5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Coffee Table</td>
+                        <td>AC200</td>
+                        <td></td>
+                        <td>$100</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Chair</td>
+                        <td>AC300</td>
+                        <td></td>
+                        <td>$150</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Desk</td>
+                        <td>AC400</td>
+                        <td></td>
+                        <td>$120</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Computer Table</td>
+                        <td>AC500</td>
+                        <td></td>
+                        <td>$130</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="right">Total:</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <h3>Credit Card Information</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" align="left">Card Type:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="radio" name="card-type" id="mastercard" value="mastercard">
+                        <label for="mastercard">Mastercard</label>
+                    </td>
+                    <td>
+                        <label for="card-number">Card Number:</label>
+                        <input type="number" name="card-number" id="card-number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="card-type" id="visa" value="visa">
+                        <label for="visa">Visa</label>
+                    </td>
+                    <td>
+                        <label for="expiry">Expiry Date: &nbsp;</label>
+                        <input type="date" name="expiry" id="expiry">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="card-type" id="gift-card" value="gift-card">
+                        <label for="gift-card">Gift Card</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="delivery-address">Delivery Address:</label>
+                    </td>
+                    <td>
+                        <textarea name="delivery-address" id="delivery-address" cols="25" rows="6"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <button type="submit">Send Order</button>
+        <button type="reset">Clear Form</button>
+
+    </form>
+</body>
+</html>
